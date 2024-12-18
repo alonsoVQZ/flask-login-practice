@@ -17,7 +17,7 @@ class TimestampMixin():
 # User Model
 class User(TimestampMixin, UserMixin, db.Model):
   id: Mapped[int] = mapped_column(primary_key=True)
-  email: Mapped[str] = mapped_column(nullable=False)
+  email: Mapped[str] = mapped_column(nullable=False, unique=True)
   hashed_password: Mapped[str] = mapped_column(nullable=False)
 
   def __init__(self, email, password):
