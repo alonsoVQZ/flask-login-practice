@@ -1,7 +1,6 @@
 from flask import Flask, redirect, render_template, url_for
 from flask_login import LoginManager, login_required, login_user, current_user, logout_user
 from flask_migrate import Migrate
-from sqlalchemy.sql.functions import user
 
 from config import Config
 from forms import LoginForm, RegisterForm
